@@ -10,7 +10,7 @@ router.get("/characters", async (req, res) => {
         const {
             limit,
             skip,
-            title
+            name
         } = req.query
 
         const fetchApiKeyFromApi = async () => {
@@ -18,8 +18,8 @@ router.get("/characters", async (req, res) => {
 
             let filters = "";
 
-            if (title) {
-                filters += `&title=${title}`
+            if (name) {
+                filters += `&name=${name}`
 
             }
 
